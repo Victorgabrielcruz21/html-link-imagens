@@ -45,8 +45,52 @@ nav a:hover {
     background-color: #333;
     color: #fff;
 }
+@media screen and (max-width: 600px){
 
-/* Estilos para os produtos em destaque */
+    nav ul {
+        list-style-type: none;
+        
+    }
+    
+    nav ul li {
+        display: inline; 
+        position: relative; 
+        margin-right: 10px;
+    }
+    
+    nav a {
+      padding: 0;
+      border: 0 ;
+      border-radius: 0;
+      background-color: #333;
+      text-decoration: none;
+      color: white;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: white;
+    }
+    nav a::after {
+        content: ''; 
+        position: absolute;
+        top: 49px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5px; 
+        background-color: transparent; 
+        transition: background-color 0.3s ease; 
+    }
+    nav li:hover a::after {
+        background-color: white; /* Cor da barra ao passar o mouse sobre o item do menu */
+      }
+    .loja img{
+        width: 250px;
+        margin-left:0px;
+    }
+}
+
 .dashboard {
     display: flex;
     flex-wrap: wrap;
